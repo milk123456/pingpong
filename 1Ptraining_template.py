@@ -22,10 +22,10 @@ x = np.array([1, 2, 3, 4, 5])  # feature
 y = np.array([0]) # label
 
 for data in data_set:
-    Ball_x = [189]
-    Ball_y = [44]
-    Ball_speed_x = [7]
-    Ball_speed_y = [-7]
+    Ball_x = []
+    Ball_y = []
+    Ball_speed_x = []
+    Ball_speed_y = []
     direction = []
     temp = []   # record the frame hitting the platform
     y_temp = [] # record label
