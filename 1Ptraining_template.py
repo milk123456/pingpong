@@ -110,5 +110,5 @@ path = os.path.join(os.path.dirname(__file__), "save")
 if not os.path.isdir(path):
     os.mkdir(path)
 
-with open(os.path.join(path, "model1.pickle"), 'wb') as f:
+with open(os.path.join(path, "model.pickle"), 'wb') as f:
     pickle.dump(model, f)
