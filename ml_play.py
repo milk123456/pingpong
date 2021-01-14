@@ -66,7 +66,7 @@ class MLPlay:
                         direction = 2
                     else:
                         direction = 3
-                X = [scene_info["ball"][0], scene_info["ball"][1], direction, scene_info["blocker"][0],scene_info["ball_speed"][0],scene_info["ball_speed"][1]]
+                X = [scene_info["ball"][0], scene_info["ball"][1], direction,scene_info["ball_speed"][0],scene_info["ball_speed"][1]]
                 X = np.array(X).reshape((1,-1))
                 pred = self.model.predict(X)
                 if scene_info["platform_2P"][0]+20  > (pred-10)and scene_info["platform_2P"][0]+20 < (pred+10):
