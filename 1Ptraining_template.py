@@ -64,7 +64,7 @@ for data in data_set:
     Ball_y = np.array(Ball_y[:len(y_temp)]).reshape((len(y_temp), 1))
     Ball_speed_x = np.array(Ball_speed_x[:len(y_temp)]).reshape((len(y_temp), 1))
     Ball_speed_y = np.array(Ball_speed_y[:len(y_temp)]).reshape((len(y_temp), 1))
-    Blocker_x = np.array(Blocker_x[:len(y_temp)]).reshape((len(y_temp), 1))
+
     
 
     for i in range(len(Ball_speed_x)):
@@ -80,7 +80,7 @@ for data in data_set:
                 direction.append(3)
 
     direction = np.array(direction).reshape((len(direction), 1))
-    x = np.vstack((x, np.hstack((Ball_x, Ball_y, direction, Blocker, Ball_speed_x, Ball_speed_y))))
+    x = np.vstack((x, np.hstack((Ball_x, Ball_y, direction, Ball_speed_x, Ball_speed_y))))
     y = np.hstack((y, np.array(y_temp)))
 
 x = x[1::] #remove [1, 2, 3, 4, 5, 6]
